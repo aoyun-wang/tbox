@@ -45,17 +45,6 @@
 // NMAX is the largest n such that 255n(n+1)/2 + (n+1)(BASE-1) <= 2^32-1
 #define NMAX (5552)
 
-// dot
-#define DO1(data, i)    {adler += (data)[i]; sum2 += adler;}
-#define DO2(data, i)    DO1(data, i); DO1(data, i + 1);
-#define DO4(data, i)    DO2(data, i); DO2(data, i + 2);
-#define DO8(data, i)    DO4(data, i); DO4(data, i + 4);
-#define DO16(data)      DO8(data, 0); DO8(data, 8);
-
-// mod
-#define MOD(a)          (a) %= BASE
-#define MOD28(a)        (a) %= BASE
-#define MOD63(a)        (a) %= BASE
 
 /* //////////////////////////////////////////////////////////////////////////////////////
  * implementation
