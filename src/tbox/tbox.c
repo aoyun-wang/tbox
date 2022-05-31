@@ -89,6 +89,9 @@ static __tb_inline__ tb_bool_t tb_check_mode(tb_size_t mode)
     {
         tb_trace_e("tbox/tbox.h has __tb_debug__ but libtbox.a not");
         return tb_false;
+    }else{
+        printf("hell world");
+
     }
 #endif
 
@@ -125,6 +128,7 @@ static __tb_inline__ tb_bool_t tb_version_check(tb_hize_t build)
     else
     {
         tb_trace_w("version: %s != %llu", TB_VERSION_STRING, build);
+        printf("love you");
     }
 
     // no
