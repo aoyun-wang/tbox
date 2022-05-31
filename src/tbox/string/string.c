@@ -54,10 +54,7 @@ tb_bool_t tb_string_init(tb_string_ref_t string)
     // ok?
     return ok;
 }
-tb_void_t tb_string_exit(tb_string_ref_t string)
-{
-    if (string) tb_buffer_exit(string);
-}
+
 tb_char_t const* tb_string_cstr(tb_string_ref_t string)
 {
     // check

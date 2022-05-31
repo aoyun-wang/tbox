@@ -47,10 +47,7 @@ tb_regex_ref_t tb_regex_init(tb_char_t const* pattern, tb_size_t mode)
     tb_assert_noimpl();
     return tb_null;
 }
-tb_void_t tb_regex_exit(tb_regex_ref_t regex)
-{
-    tb_assert_noimpl();
-}
+
 tb_long_t tb_regex_match(tb_regex_ref_t regex, tb_char_t const* cstr, tb_size_t size, tb_size_t start, tb_size_t* plength, tb_vector_ref_t* presults)
 {
     tb_assert_noimpl();
@@ -62,14 +59,7 @@ tb_char_t const* tb_regex_replace(tb_regex_ref_t regex, tb_char_t const* cstr, t
     return tb_null;
 }
 #endif
-tb_long_t tb_regex_match_cstr(tb_regex_ref_t regex, tb_char_t const* cstr, tb_size_t start, tb_size_t* plength, tb_vector_ref_t* presults)
-{
-    // check
-    tb_assert_and_check_return_val(cstr, -1);
 
-    // done
-    return tb_regex_match(regex, cstr, tb_strlen(cstr), start, plength, presults);
-}
 tb_vector_ref_t tb_regex_match_simple(tb_regex_ref_t regex, tb_char_t const* cstr)
 {
     // check
